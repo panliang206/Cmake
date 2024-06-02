@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<string.h>
-#define FILENAME "data.txt"
+#include<stdlib.h>
 #include"login.h"
 #include"create_data.h"
 #include"search_data.h"
@@ -24,7 +24,7 @@ void  Choice(void){
 }
 
 void add(){
-    printf("\n");
+    system("cls");
     printf("请选择货物的种类:\n1.休闲零食\n2.饮料冲调\n3.鲜甜水果\n4.营养早餐\n5.牛奶面包\n6.速冻食品\n");
     int choice;
     scanf("%d",&choice);
@@ -92,7 +92,7 @@ void sort(int x,int y){
 
 
 void del(){
-    printf("\n");
+    system("cls");
     printf("请输入你要删除的商品种类:\n");
     printf("1.休闲零食\n2.饮料冲调\n3.鲜甜水果\n4.营养早餐\n5.牛奶面包\n6.速冻食品\n");
     
@@ -153,7 +153,7 @@ void del(){
 }
 
 void abc(){
-    printf("/n");
+    system("cls");
     printf("请输入你要打折的商品种类:\n");
     printf("1.休闲零食\n2.饮料冲调\n3.鲜甜水果\n4.营养早餐\n5.牛奶面包\n6.速冻食品\n");
 

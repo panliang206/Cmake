@@ -8,6 +8,7 @@ char mm[20];
 
 
 int part1(void){
+    
     printf("请输入您的账号和密码：\n");
     char s1[20];
     char s2[20];

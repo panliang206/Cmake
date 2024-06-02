@@ -1,8 +1,9 @@
 #include<stdio.h>
 #include<string.h>
+#include<stdlib.h>
 
 void part2(){
-    printf("\n");
+    system("cls");
     printf("请输入你要查看的种类:\n1.休闲零食\n2.饮料冲调\n3.鲜甜水果\n4.营养早餐\n5.牛奶面包\n6.速冻食品\n");
     printf("\n");
     int j;
