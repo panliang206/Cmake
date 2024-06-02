@@ -4,7 +4,7 @@
 void control(){
     printf("\n");
     printf("请选择你要进行的操作:\n");
-    printf("1.商品信息查询\n2.添加货物功能\n3.删除货物功能\n4.退出\n");
+    printf("1.商品信息查询\n2.添加货物功能\n3.删除货物功能\n4.选择商品促销\n5.退出\n");
     int choice;
     scanf("%d",&choice);
     switch(choice){
@@ -18,7 +18,10 @@ void control(){
             del();
             break;
         case 4:
+            abc();
+        case 5:
             printf("谢谢使用，再见！\n");
+
             // 退出系统前保存数据到文件
             FILE *file = fopen("data.txt", "w");
             file = fopen(FILENAME, "w");
@@ -26,7 +29,7 @@ void control(){
                 fprintf(file,"%s %s\n",zh,mm);
                 for (int i = 1; i < 11 ; i++) {
                     for (int j = 1; j < 7; j++) {
-                        fprintf(file, "%s %d %d %d %d %d %d %d %d %d\n",
+                        fprintf(file, "%s %f %d %d %d %d %d %d %d %d\n",
                         a[i][j].name, a[i][j].price, a[i][j].number,
                         a[i][j].sc.year, a[i][j].sc.month, a[i][j].sc.day,
                         a[i][j].jz.year, a[i][j].jz.month, a[i][j].jz.day,

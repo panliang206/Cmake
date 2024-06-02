@@ -62,7 +62,7 @@ void add(){
     p->name[strcspn(p->name, "\n")] = '\0';
 
     printf("请输入商品的价格和数量:\n");
-    scanf("%d",&p->price);
+    scanf("%f",&p->price);
     scanf("%d",&p->number);
     printf("请输入生产日期:\n");
     scanf("%d %d %d",&p->sc.year,&p->sc.month,&p->sc.day);
@@ -137,7 +137,7 @@ void del(){
 
     
     strcpy(a[x][y].name, "");
-    a[x][y].price=0;
+    a[x][y].price=0.0;
     a[x][y].number=0;
     a[x][y].sc.year=a[x][y].sc.month=a[x][y].sc.day=0;
     a[x][y].jz.year=a[x][y].jz.month=a[x][y].jz.day=0;
@@ -205,7 +205,7 @@ int main(){
         fscanf(file,"%s %s\n",zh,mm);
         for (int i = 1; i < 11; i++) {
             for (int j =1 ; j < 7; j++) {
-                fscanf(file, "%s %d %d %d %d %d %d %d %d %d",
+                fscanf(file, "%s %f %d %d %d %d %d %d %d %d",
                        &a[i][j].name, &a[i][j].price, &a[i][j].number,
                        &a[i][j].sc.year, &a[i][j].sc.month, &a[i][j].sc.day,
                        &a[i][j].jz.year, &a[i][j].jz.month, &a[i][j].jz.day,

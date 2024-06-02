@@ -15,7 +15,7 @@ struct end{
 
 struct shangpin{
     char name[60];
-    int price;
+    float price;
     int number;
     struct begin sc;
     struct end jz;

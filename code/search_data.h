@@ -11,7 +11,7 @@ void part2(){
     for(int i=1;i<11;i++){
         if(a[i][j].sign){
             puts(a[i][j].name);
-            printf("价格:%d/包\n",a[i][j].price);
+            printf("价格:%.2f/包\n",a[i][j].price);
             printf("还剩%d包\n",a[i][j].number);
             printf("生产日期：%d年%d月%d日\n",a[i][j].sc.year,a[i][j].sc.month,a[i][j].sc.day);
             printf("保质日期：%d年%d月%d日\n",a[i][j].jz.year,a[i][j].jz.month,a[i][j].jz.day);
