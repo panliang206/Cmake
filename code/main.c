@@ -5,6 +5,8 @@
 #include"create_data.h"
 #include"search_data.h"
 #include"tools.h"
+#include"gq.h"
+#include<time.h>
 #define FILENAME "data.txt"
 
 
@@ -223,13 +225,9 @@ int main(){
                     
     if(part1()){
         control();
-
     }
-//000
-//，啊，s
 
+    return 0;}
 
-    return 0;
- }
 
 
