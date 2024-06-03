@@ -23,7 +23,7 @@ void park()
             printf("6.速冻食品\n");
     for (int i = 1; i < 11; i++) 
     {
-    if(a[i][j]="")
+    if(strcpy(a[i][j].name,""))
     {break;}
     
     struct Product sp;
@@ -43,6 +43,5 @@ void park()
         printf("%s 已经过期\n", sp.name);}
     }
     }
-    return 0;
  }
    
