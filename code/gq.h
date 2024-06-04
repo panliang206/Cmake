@@ -1,5 +1,4 @@
 #include<time.h>
-#include"tools.h"
 struct Product {
     char name[60];
     time_t expirationDate;
@@ -15,7 +14,7 @@ void park()
             printf("2.饮料冲调\n");
             break;
         case 3:
-            printf("3.牛奶面包\n");
+            printf("3.鲜甜水果\n");
             break;
         case 4:
             printf("4.营养早餐\n");
@@ -50,5 +49,9 @@ void park()
         printf("%s 已经过期\n", sp.name);}
     }
     }
+    int j;
+    printf("按0返回上一届面");
+    printf("\n");
+    scanf("%d",&j);
     control();
  }
