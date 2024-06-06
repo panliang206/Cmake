@@ -181,7 +181,7 @@ void abc(){
             if(!cnt){
                 printf("\n");
                 printf("该种类商品无更多,请选择其它种类。\n");
-                del();
+                abc();
 
             }
         }
