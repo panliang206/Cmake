@@ -197,6 +197,7 @@ void abc(){
     scanf("%f",&p);
 
     a[s][q].price=a[s][q].price*p;
+    control();
 
 }
 
