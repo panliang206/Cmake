@@ -20,8 +20,10 @@ void control(){
             break;
         case 4:
             abc();
+            break;
         case 5:
             park();
+            break;
         case 6:
             printf("谢谢使用，再见！\n");
 
