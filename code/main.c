@@ -177,6 +177,8 @@ void abc(){
             printf("%d.",i);
             puts(a[i][q].name);
             printf("\n");
+            printf("%.2f元",a[i][q].price);
+            printf("\n");
 
             if(!cnt){
                 printf("\n");
@@ -188,16 +190,23 @@ void abc(){
 
     }
 
-    int s;
+    int s,j;
     float p; 
     printf("\n");
-    printf("请选择你要删除的商品:\n");
+    printf("请选择你要打折的商品:\n");
     scanf("%d",&s);
     printf("请输入你要打几折:\n");
     scanf("%f",&p);
 
     a[s][q].price=a[s][q].price*p;
+    printf("输入0返回，输入1继续打折\n");
+    scanf("%d",&j);
+    if(j==0){
     control();
+    }
+    if(j==1){
+    abc();
+    }
 
 }
 

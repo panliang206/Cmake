@@ -12,9 +12,11 @@ int part1(void){
     printf("请输入您的账号和密码：\n");
     char s1[20];
     char s2[20];
+    char s3[20]="123456";
+    char s4[20];
+
     gets(s1);
     gets(s2);
-
 
     if(!strcmp(s1,zh)){
         if(!strcmp(s2,mm)){
@@ -28,6 +30,9 @@ int part1(void){
     cnt++;
 
     if(cnt==3){
+        printf("请输入密保:\n");
+        gets(s4);
+        if(!strcmp(s4,s3)){
         printf("请重设账号密码!\n\n\n");
         printf("请输入你要重设的账号:\n");
         gets(zh);
@@ -36,8 +41,10 @@ int part1(void){
         gets(mm);
 
         part1();
-
+    
+        }
         
+
     }
     
 
