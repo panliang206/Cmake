@@ -199,7 +199,7 @@ void abc(){
     scanf("%f",&p);
 
     a[s][q].price=a[s][q].price*p;
-    printf("输入0返回，输入1继续打折\n");
+    printf("输入0返回菜单，输入1继续打折\n");
     scanf("%d",&j);
     if(j==0){
     control();
