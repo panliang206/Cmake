@@ -163,7 +163,7 @@ void abc(){
     scanf("%d",&q);
 
     if (q < 1 || q > 6) {
-        printf("输入的货物种类不合法。\n");
+        
         abc();
     }
 
