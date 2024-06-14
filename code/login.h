@@ -48,7 +48,7 @@ int part1(void){
     }
     
 
-    printf("账号或密码错误请重试！\n");
+    printf("输入错误请重试！\n");
 
    
     printf("\n");
