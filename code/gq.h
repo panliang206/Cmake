@@ -5,7 +5,8 @@ struct Product {
 };
 
 void park()
-{ for (int j = 1; j < 7 ; j++){ 
+{ system("cls");
+    for (int j = 1; j < 7 ; j++){ 
      switch(j){
         case 1: 
             printf("1.休闲零食\n");
