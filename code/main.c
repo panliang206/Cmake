@@ -59,24 +59,50 @@ void add(){
     getchar();
 
     printf("请输入你要添加商品的名称:\n");
+    char s[60];
+    gets(s);
+    
+    int flag=0;
+    for(int i=1;i<11;i++){
+        if(a[i][choice].sign){
+            if(strcmp(a[i][choice].name,s)==0){
+                p=&a[i][choice];
+                printf("已存在该商品，请直接输入添加的数量:\n");
+                int t;
+                scanf("%d",&t);
+                p->number+=t;
+                flag=1;
+                break;
+            }
+        }
+    }
 
-    fgets(p->name, sizeof(p->name), stdin);
-    p->name[strcspn(p->name, "\n")] = '\0';
+    if(flag){
+        printf("数量添加完成，按任意键返回主菜单。\n");
+        getchar();
+        control();
+    }
 
+    
+
+    strcpy(p->name,s);
     printf("请输入商品的价格和数量:\n");
     scanf("%f",&p->price);
     scanf("%d",&p->number);
+
     printf("请输入生产日期:\n");
     scanf("%d %d %d",&p->sc.year,&p->sc.month,&p->sc.day);
+    
     printf("请输入过期日期:\n");
     scanf("%d %d %d",&p->jz.year,&p->jz.month,&p->jz.day);
     p->sign=1;
 
     printf("添加完成，是否要继续添加还是退出？\n");
     Choice();
-
+    
 
 }
+
 
 
 void sort(int x,int y){
