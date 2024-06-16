@@ -28,17 +28,14 @@ void control(){
             printf("谢谢使用，再见！\n");
 
             // 退出系统前保存数据到文件
-            FILE *file = fopen("data.txt", "w");
-            file = fopen("data.txt", "w");
+            FILE *file = fopen("data.txt", "wb");
+            
             if (file != NULL) {
-                fprintf(file,"%s %s\n",zh,mm);
+                fwrite(zh, sizeof(char), 20, file);
+                fwrite(mm, sizeof(char), 20, file);
                 for (int i = 1; i < 11 ; i++) {
                     for (int j = 1; j < 7; j++) {
-                        fprintf(file, "%s %f %d %d %d %d %d %d %d %d\n",
-                        a[i][j].name, a[i][j].price, a[i][j].number,
-                        a[i][j].sc.year, a[i][j].sc.month, a[i][j].sc.day,
-                        a[i][j].jz.year, a[i][j].jz.month, a[i][j].jz.day,
-                        a[i][j].sign);
+                        fwrite(&a[i][j], sizeof(a), 1, file);
             }
         }
         fclose(file);
@@ -53,7 +50,6 @@ void control(){
     }
 
 }
-
 
     
 

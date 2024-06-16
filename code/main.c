@@ -211,17 +211,14 @@ void abc(){
 }
 
 int main(){
-    FILE *file = fopen("data.txt", "r");
+     FILE *file = fopen("data.txt", "rb");
     if (file != NULL) {
-        // 逐行读取文件内容并解析到商品数组中
-        fscanf(file,"%s %s\n",zh,mm);
+      
+        fread(zh, sizeof(char), 20, file);
+        fread(mm, sizeof(char), 20, file);
         for (int i = 1; i < 11; i++) {
             for (int j =1 ; j < 7; j++) {
-                fscanf(file, "%s %f %d %d %d %d %d %d %d %d",
-                       &a[i][j].name, &a[i][j].price, &a[i][j].number,
-                       &a[i][j].sc.year, &a[i][j].sc.month, &a[i][j].sc.day,
-                       &a[i][j].jz.year, &a[i][j].jz.month, &a[i][j].jz.day,
-                       &a[i][j].sign);
+                fread(&a[i][j], sizeof(a), 1, file);
             }
         }
 
