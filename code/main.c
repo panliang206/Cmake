@@ -137,7 +137,7 @@ void del(){
 
         int cnt=0;
     
-        if(a[i][y].sign){
+        if(a[i][y].sign){ 
             cnt++;
             printf("\n");
             printf("%d.",i);
