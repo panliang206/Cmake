@@ -45,9 +45,20 @@ void park()
     time(&currentTime);
 
     if (difftime(sp.expirationDate, currentTime) > 0) {
-        printf("%s 没有过期\n", sp.name);}
+        printf("%s 没有过期\n", sp.name);
+        printf("截止日期：");
+        printf("%d年",a[i][j].jz.year);
+        printf("%d月",a[i][j].jz.month);
+        printf("%d日",a[i][j].jz.day);
+        printf("\n");
+        }
     else {
-        printf("%s 已经过期\n", sp.name);}
+        printf("%s 已经过期\n", sp.name);
+        printf("截止日期：");
+        printf("%d年",a[i][j].jz.year);
+        printf("%d月",a[i][j].jz.month);
+        printf("%d日",a[i][j].jz.day);
+        printf("\n");}
     }
     }
     int j;
