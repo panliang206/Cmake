@@ -175,8 +175,7 @@ void abc(){
             cnt++;
             printf("\n");
             printf("%d.",i);
-            puts(a[i][q].name);
-            printf("\n");
+            printf("%s",a[i][q].name);
             printf("%.2f元",a[i][q].price);
             printf("\n");
 
