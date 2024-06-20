@@ -83,7 +83,7 @@ void sort(int x,int y){
     for ( x; x < 11; x++ ) {
         
             if (a[x+1][y].sign) {
-                // 交换相邻元素
+            
                 struct shangpin temp = a[x+1][y];
                 a[x+1][y] = a[x][y];
                 a[x][y] = temp;
@@ -213,7 +213,7 @@ void abc(){
 int main(){
     FILE *file = fopen("data.txt", "r");
     if (file != NULL) {
-        // 逐行读取文件内容并解析到商品数组中
+       
         fscanf(file,"%s %s\n",zh,mm);
         for (int i = 1; i < 11; i++) {
             for (int j =1 ; j < 7; j++) {
