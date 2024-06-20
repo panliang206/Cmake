@@ -96,24 +96,12 @@ void add(){
     printf("请输入过期日期:\n");
     scanf("%d %d %d",&p->jz.year,&p->jz.month,&p->jz.day);
 
-
-    printf("%d %d %d",p->sc.year,p->sc.month,p->sc.day);    
-    if(p->sc.year <= p->jz.year ){
-        if( p->sc.month <= p->jz.month){
-            if( p->sc.day < p->jz.day){
-                p->sign=1;}
-        } 
-    }else {
-        printf("日期格式错误！！！\n");
-        printf("是否要继续操作?\n");
-        Choice();
-    }
-            
-
+    p->sign=1;
+    
+   
     printf("添加完成，是否要继续添加还是退出？\n");
     Choice();
     
-
 }
 
 
